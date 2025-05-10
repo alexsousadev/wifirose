@@ -130,10 +130,6 @@ tcp_server_accept(void *arg, struct tcp_pcb *newpcb, err_t err)
 // Cria o servidor TCP
 void create_server_button()
 {
-
-    printf("Servidor executando em: http://%s:%d\n",
-           ipaddr_ntoa(netif_ip4_addr(netif_default)), PORT_API);
-
     struct tcp_pcb *server_pcb = create_connection_tcp();
     if (!server_pcb)
     {
